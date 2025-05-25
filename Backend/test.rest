@@ -1,0 +1,26 @@
+#  POST  http://localhost:5000/auth/login
+# Content-Type: application/json
+
+# {
+#     username:"Kartik Siorhi",
+#     password:"1071"
+
+# }
+
+GET http://localhost:5000/message/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJhZWU2MTA2YjI4OTgyMzU0MzQxYzciLCJ1c2VybmFtZSI6Inh5eiIsImlhdCI6MTc0NzY1Nzk3OCwiZXhwIjoxNzQ3NzQ0Mzc4fQ.rWnTPbzB9RNimkAH4wbWDyDVFNUoMoDaa2MQMEp0Fwg
+
+# POST http://localhost:5000/message/send
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJiMjg0MzdmMjcxMWZiOTQwOTdiMWQiLCJ1c2VybmFtZSI6IkthcnRpayBTaXJvaGkiLCJpYXQiOjE3NDc3MjYxMDcsImV4cCI6MTc0NzgxMjUwN30.6KWwAF04hShNqaOoOdsRehhgiS7eugZL1fvFnCOIu-g
+
+# {
+#   "receiverId": "682c2f6898868bcf09c4aa9a",
+#   "message": "Hello! What is going on?"
+# }
+
+
+
+# GET http://localhost:5000/message/chats?otherId=682c2f6898868bcf09c4aa9a
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODJiMjg0MzdmMjcxMWZiOTQwOTdiMWQiLCJ1c2VybmFtZSI6IkthcnRpayBTaXJvaGkiLCJpYXQiOjE3NDc3MjYxMDcsImV4cCI6MTc0NzgxMjUwN30.6KWwAF04hShNqaOoOdsRehhgiS7eugZL1fvFnCOIu-g
+
