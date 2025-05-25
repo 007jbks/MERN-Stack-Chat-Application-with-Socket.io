@@ -50,10 +50,11 @@ A real-time chat application built using the MERN stack (MongoDB, Express, React
 
     ```bash
     # Install backend dependencies
+    cd Backend
     npm install
 
     # Navigate to client folder and install frontend dependencies
-    cd client
+    cd Frontend/Frontend
     npm install
     ```
 
