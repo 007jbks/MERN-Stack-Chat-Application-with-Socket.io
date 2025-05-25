@@ -94,5 +94,4 @@ Create a `.env` file in the root folder and add your MongoDB connection string a
 
 ---
 
-## Folder Structure
 
