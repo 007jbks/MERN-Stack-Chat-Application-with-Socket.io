@@ -1,7 +1,7 @@
 // config.js
 import mongoose from "mongoose";
 
-const uri =  "mongodb+srv://jakemoriarty:brucewayne@cluster0.8puh0w9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri =  "your-url-here";
 
 
 async function run() {
