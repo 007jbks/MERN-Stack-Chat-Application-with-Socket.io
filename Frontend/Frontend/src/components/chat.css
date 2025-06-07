@@ -5,9 +5,14 @@
 }
 
 .people {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
     width: 20vw;
     background-color: rgba(69, 62, 62, 0.5);
     padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .chat {
@@ -18,6 +23,8 @@
     transition: width 0.3s ease;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    margin: 10px;
     
 }
 
@@ -37,8 +44,8 @@ hr {
 .users {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:right;
+    align-items:baseline;
 }
 
 .user {
@@ -75,6 +82,7 @@ hr {
 .chatbox{
     width: 100%;
     height: 90%;
+    overflow-y: auto;
 }
 
 .sent {
@@ -149,4 +157,8 @@ hr {
   background-color: rgba(0,0, 0, 0.5); /* light blue or whatever you like */
   font-weight: bold;
   border-radius: 5px;
+}
+
+.logout {
+  margin-top: auto;
 }

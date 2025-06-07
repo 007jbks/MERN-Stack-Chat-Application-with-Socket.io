@@ -1,8 +1,13 @@
 import React, { useState, useEffect ,useRef} from "react";
 import { io } from "socket.io-client";
 import "./chat.css";
+import {useNavigate} from 'react-router-dom';
 
-export default function Chat() {
+export default function Chat({setAuthenticated}) {
+ 
+  const logout = ()=>{
+  setAuthenticated(false);
+}
   const token = localStorage.getItem("token");
   const id = localStorage.getItem('id');
   const [users, setUsers] = useState([]);
@@ -15,7 +20,6 @@ export default function Chat() {
 
 useEffect(() => {
   socket.current = io("http://localhost:5001"); // your backend Socket.IO URL
-
   socket.current.on("receive-message", (msg) => {
     if (msg.sender === selectedUserId || msg.receiver === selectedUserId) {
       setMessages((prev) => [...prev, msg]);
@@ -41,7 +45,8 @@ const send = (receiverId, message) => {
     console.log("Message sent:", data);
     
     // Emit only if successful and message exists
-    if (data && message) {
+    if (data && message) {    navigate('/login');
+
       socket.current.emit("send-message", {
         content: message,
         sender: id,
@@ -98,8 +103,11 @@ const send = (receiverId, message) => {
             }}><span role="img" aria-label="person">👤</span>{user.username}</div>
           ))}
         </div>
-      </div>
+        <button className="logout" onClick={logout}>Logout</button>
+         </div>
+      
       )}
+      
           <div className={`chat ${!showPeople ? "full" : ""}`}>
       {!showPeople && (
         <button className="toggle-button" onClick = {()=>setShowPeople(true)}>P</button>

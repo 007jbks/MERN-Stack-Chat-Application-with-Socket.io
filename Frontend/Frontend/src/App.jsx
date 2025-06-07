@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       {isAuthenticated ? (
-        <Chat/>
+        <Chat setAuthenticated={setAuthenticated}/>
       ) : showLogin ? (
         <Login
           setShowLogin={setShowLogin}
@@ -22,6 +22,7 @@ function App() {
           setAuthenticated={setAuthenticated}
         />
       )}
+    
     </>
   );
 }
